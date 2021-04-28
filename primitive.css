@@ -98,8 +98,8 @@ html {
   font-size: 1rem;
 }
 body {
-  color: #404040;
-  background: #F0F8FF;
+  color: #ffffff;
+  background: url('https://ik.imagekit.io/d5scjfbjc/background_aXPT-W085.svg');
   font-size: 1rem;
 }
 dl,
@@ -121,7 +121,7 @@ h5 {
   font-weight: 600;
   font-family: "Dancing Script", cursive;
   line-height: 1.2;
-  color: #4e4e4e;
+  color: #ffffff;
 }
 li {
   font-weight: 600;
@@ -129,7 +129,7 @@ li {
   line-height: 1.2;
   font-size: 1.4em;
   margin: 20px auto;
-  color: #4e4e4e;
+  color: #ffffff;
 }
 h1,
 h1:not(:first-child),
@@ -275,7 +275,7 @@ dd {
   height: 100vh;
   overflow: auto;
   max-width: 1200px;
-  background:#72A0C1;
+  background:none;
   border: none;
   padding: 0 1rem;
   margin-left: auto;
@@ -541,7 +541,7 @@ a.full-button {
 [type="password"],
 [type="search"],
 [type="tel"],
-[type="text"],
+/* [type="text"], */
 [type="time"],
 [type="url"],
 [type="week"],
@@ -711,3 +711,65 @@ caption {
   }
 }
 /*# sourceMappingURL=main.css.map */
+input[type="text"] {
+	font: 15px/24px "Lato", Arial, sans-serif;
+	color: #333;
+	width: 100%;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+}
+#item{
+    border: 1px solid #ccc;
+	padding: 7px 14px 9px;
+	transition: 0.4s;
+}
+
+#item~.focus-border:before,
+#item~.focus-border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #3399FF;
+	transition: 0.3s;
+}
+
+#item~.focus-border:after {
+	top: auto;
+	bottom: 0;
+	left: auto;
+	right: 0;
+}
+
+#item~.focus-border i:before,
+#item~.focus-border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #3399FF;
+	transition: 0.4s;
+}
+
+#item~.focus-border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+}
+
+#item:focus~.focus-border:before,
+#item:focus~.focus-border:after {
+	width: 100%;
+	transition: 0.3s;
+}
+
+#item:focus~.focus-border i:before,
+#item:focus~.focus-border i:after {
+	height: 100%;
+	transition: 0.4s;
+}
