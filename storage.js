@@ -41,7 +41,8 @@ ul.addEventListener('dblclick', (e) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (input.value) {
+  console.log(input.value.trim() === '')
+  if (input.value.trim().length > 0) {
     itemArray.push(input.value);
     localStorage.setItem("items", JSON.stringify(itemArray));
     liMaker(input.value);
